@@ -3,6 +3,7 @@ package hello;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @SpringBootApplication
@@ -19,8 +20,13 @@ public class App extends WebMvcConfigurerAdapter {
     if (!registry.hasMappingForPattern("/webjars/**")) {
       registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
     }
-    if (!registry.hasMappingForPattern("/index.html")) {
-      registry.addResourceHandler("/index.html").addResourceLocations(CLASSPATH_RESOURCE_LOCATIONS);
+    if (!registry.hasMappingForPattern("/**")) {
+      registry.addResourceHandler("/**").addResourceLocations(CLASSPATH_RESOURCE_LOCATIONS);
     }
+  }
+
+  @Override
+  public void addViewControllers(ViewControllerRegistry registry) {
+    registry.addViewController("/").setViewName("forward:/index.html");
   }
 }
