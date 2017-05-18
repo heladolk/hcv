@@ -1,5 +1,10 @@
-let path = require('path')
-let node_modules = path.resolve(__dirname, 'node_modules')
+const path = require('path')
+const node_modules = path.resolve(__dirname, 'node_modules')
+const packageJSON = require('./package.json');
+
+const PATHS = {
+  build: path.join(__dirname, 'target', 'classes', 'META-INF', 'resources', 'webjars', packageJSON.name, packageJSON.version)
+};
 
 var PROD = JSON.stringify(JSON.parse(process.env.PROD_DEV || 'false')) === 'true';
 
@@ -9,9 +14,8 @@ console.log('* PROD = ' + PROD);
 module.exports = {
   entry: path.resolve(__dirname, 'src/index.jsx'),
   output: {
-    path: path.resolve(__dirname, 'public/js'),
-    filename: 'bundle.js',
-    publicPath: 'js/'
+    path: PATHS.build,
+    filename: 'app-bundle.js'
   },
   resolve: {
     extensions: ['.js', '.jsx']

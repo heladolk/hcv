@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --devtool eval --inline --colors --hot --content-base public/",
     "test": "jest",
-    "webpack": "webpack -d"
+    "build": "webpack -p"
   },
   "author": "Winnie Kwon",
   "license": "ISC",
