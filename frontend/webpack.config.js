@@ -34,6 +34,7 @@ module.exports = {
     ]
   },
   devServer: {
+    contentBase: 'public/',
     host: '0.0.0.0',
     port: 3000,
     proxy: {
@@ -42,5 +43,6 @@ module.exports = {
         secure: false
       }
     }
-  }
+  },
+  devtool: 'inline-source-map'
 }
