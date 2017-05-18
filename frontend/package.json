@@ -33,11 +33,13 @@
     "webpack-dev-server": "^1.10.1"
   },
   "jest": {
+    "roots": ["./__tests__"],
     "testPathIgnorePatterns": [
       "/__tests__/helpers/"
     ],
     "moduleNameMapper": {
       ".*\\.css$": "<rootDir>/__tests__/helpers/dummy.js"
-    }
+    },
+    "verbose": true
   }
 }

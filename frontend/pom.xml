@@ -51,6 +51,17 @@
                         </configuration>
                     </execution>
 
+                    <execution>
+                        <id>javascript tests</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                        <configuration>
+                            <arguments>test</arguments>
+                        </configuration>
+                    </execution>
+
                 </executions>
             </plugin>
         </plugins>
