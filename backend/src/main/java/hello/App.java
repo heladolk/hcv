@@ -6,11 +6,11 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @SpringBootApplication
-public class Application extends WebMvcConfigurerAdapter {
+public class App extends WebMvcConfigurerAdapter {
   private static final String[] CLASSPATH_RESOURCE_LOCATIONS = {"classpath:/static/"};
 
   public static void main(String[] args) {
-    SpringApplication.run(Application.class, args);
+    SpringApplication.run(App.class, args);
   }
 
   @Override
