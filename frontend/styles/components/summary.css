@@ -1,0 +1,41 @@
+#summary-box {
+    float: left;
+    width: 30%;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+#summary-title {
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.median-title {
+    font-size: 14px;
+}
+
+.item-title {
+    font-size: 16px;
+    font-weight: 500;
+    /*text-transform: uppercase;*/
+    letter-spacing: 0.03em;
+    padding: 5px;
+}
+
+.item-stat {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+}
+
+.ratio {
+    /*color: blue;*/
+    font-weight: bold;
+}
+
+.house-value {
+    font-weight: bold;
+}
