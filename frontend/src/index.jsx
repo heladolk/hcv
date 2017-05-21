@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Home } from './home'
+import Board from './board'
 import '../styles/index.css'
 
 
 ReactDOM.render(
-  <Home/>,
-  document.getElementById('main')
-);
+    <Board />,
+    document.getElementById('content')
+)

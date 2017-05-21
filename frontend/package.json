@@ -18,9 +18,8 @@
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
     "babel-preset-es2015": "^6.18.0",
-    "babel-preset-es2016": "^6.24.1",
-    "babel-preset-es2017": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.1",
     "enzyme": "^2.8.2",
     "jest": "^20.0.1",
@@ -33,7 +32,9 @@
     "webpack-dev-server": "^1.10.1"
   },
   "jest": {
-    "roots": ["./__tests__"],
+    "roots": [
+      "./__tests__"
+    ],
     "testPathIgnorePatterns": [
       "/__tests__/helpers/"
     ],
